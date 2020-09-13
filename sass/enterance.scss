@@ -1,0 +1,63 @@
+@charset "utf-8";
+@import "_reset";
+$basefont:40px;
+$blue: #0075c1;
+$black:#434242;
+@function r($n) {
+    @return $n / $basefont * 1rem
+}
+
+.web {
+    width: 100vw;
+    height: 100vh;
+    background-color: $blue;
+    background: url(../img/bg.png) no-repeat;
+    background-size: cover;
+    overflow: auto;
+    .box {
+        position: relative;
+        margin: r(170px) auto;
+        width: r(590px);
+        height: r(839px);
+        background-color: rgba(#fff, .3);
+        box-shadow: 0px 4px 13px 5px rgba(0, 0, 0, 0.3);
+        padding: r(150px) r(28px) 0;
+        box-sizing: border-box;
+        color: $black;
+        text-align: center;
+        font-size: r(26px);
+        .top {
+            position: absolute;
+            top: r(40px);
+            left: r(28px);
+            text-align: right;
+            width: r(264px);
+            // height: r(30px);
+            border-bottom: 1px solid $black;
+            font-size: r(28px);
+        }
+        .box_img {
+            width: r(265px);
+            height: r(265px);
+            border: solid 4px #434242;
+            margin-left: 3.25rem;
+            margin-top: r(30px);
+            img {
+                width: 100%;
+            }
+        }
+        .baocun_img {
+            display: block;
+            width: r(187px);
+            height: r(57px);
+            background-color: #ffffff;
+            box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.39);
+            border-radius: r(29px);
+            margin: r(30px) auto;
+            font-size: r(24px);
+            color: $blue;
+            line-height: r(57px);
+            text-decoration: none;
+        }
+    }
+}

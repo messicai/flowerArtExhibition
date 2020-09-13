@@ -1,0 +1,46 @@
+@charset "utf-8";
+@import "_reset";
+$basefont:40px;
+$blue: #0075c1;
+$black:#434242;
+@function r($n) {
+    @return $n / $basefont * 1rem
+}
+
+.web {
+    width: 100vw;
+    height: 100vh;
+    background: url(../img/bg.png) no-repeat;
+    background-size: cover;
+    overflow: auto;
+    box-sizing: border-box;
+    padding-top: r(215px);
+    .web_txt {
+        font-size: r(30px);
+        margin-left: r(94px);
+        color: $blue;
+    }
+    .box {
+        position: relative;
+        margin: r(150px) auto;
+        width: r(590px);
+        height: r(380px);
+        background-color: rgba(#fff, .3);
+        box-shadow: 0px 4px 13px 5px rgba(0, 0, 0, 0.3);
+        border-radius: r(10px);
+        font-size: r(30px);
+        color: $black;
+        text-align: center;
+        box-sizing: border-box;
+        padding: r(80px) r(158px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .no {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

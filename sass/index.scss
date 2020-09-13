@@ -1,0 +1,75 @@
+@charset "utf-8";
+@import "_reset";
+$basefont:40px;
+$blue: #0075c1;
+$black:#434242;
+@function r($n) {
+    @return $n / $basefont * 1rem
+}
+
+#YY {
+    width: r(750px);
+    min-height: 100vh;
+    height: auto;
+    background-color: $blue;
+    overflow: auto;
+    // border: 0.5px solid #fff;
+    background: url(../img/bg.png) no-repeat;
+    background-size: cover;
+    .login {
+        margin: r(105px) auto;
+        width: 100%;
+        // height: 100vh;
+        .logo {
+            margin: 0 auto;
+            width: r(320px);
+            height: r(300px);
+            img {
+                width: 100%;
+            }
+        }
+        .conter {
+            overflow: auto;
+            margin-top: r(140px);
+            padding: 0 r(87px);
+            .text {
+                // overflow: auto;
+                font-size: r(26px);
+                input {
+                    border: none;
+                    width: r(576px);
+                    height: r(76px);
+                    background-color: rgba(#fff, 0.3);
+                    border-radius: r(38px);
+                    font-size: r(26px);
+                    color: $black;
+                    // margin-bottom: r(30px);
+                    text-indent: 1em;
+                }
+                b {
+                    display: block;
+                    height: r(50px);
+                    line-height: r(50px);
+                    text-align: center;
+                    color: brown;
+                }
+            }
+            .btn {
+                display: flex;
+                justify-content: space-between;
+                button {
+                    width: r(245px);
+                    height: r(76px);
+                    background-color: rgba(white, 0.6);
+                    box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.39);
+                    border-radius: r(38px);
+                    outline-style: none;
+                    border: none;
+                    cursor: pointer;
+                    font-size: r(28px);
+                    color: $blue;
+                }
+            }
+        }
+    }
+}

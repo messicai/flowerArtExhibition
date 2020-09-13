@@ -1,0 +1,221 @@
+@charset "UTF-8";
+/*Css Document*/
+/*!
+* @名称：reset.css
+* @功能：1、重设浏览器默认样式
+* 2、设置通用原子类
+*/
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+html {
+  background: white;
+  color: black;
+}
+
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  margin: 0;
+  padding: 0;
+}
+
+/* 要注意表单元素并不继承父级 font 的问题 */
+body, button, input, select, textarea {
+  font: 12px \5b8b\4f53,arial,sans-serif;
+}
+
+input, select, textarea {
+  font-size: 100%;
+}
+
+/* 去掉 table cell 的边距并让其边重合 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ie bug：th 不继承 text-align */
+th {
+  text-align: inherit;
+}
+
+/* 去除默认边框 */
+fieldset, img {
+  border: none;
+}
+
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe {
+  display: block;
+}
+
+/* 去掉 firefox 下此元素的边框 */
+abbr, acronym {
+  border: none;
+  font-variant: normal;
+}
+
+/* 一致的 del 样式 */
+del {
+  text-decoration: line-through;
+}
+
+address, caption, cite, code, dfn, em, th, var {
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* 去掉列表前的标识，li 会继承 */
+ol, ul {
+  list-style: none;
+}
+
+/* 对齐是排版最重要的因素，别让什么都居中 */
+caption, th {
+  text-align: left;
+}
+
+/* 来自yahoo，让标题都自定义，适应多个系统应用 */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: 500;
+}
+
+q:before, q:after {
+  content: '';
+}
+
+/* 统一上标和下标 */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* 让链接在 hover 状态下显示下划线 */
+a:hover {
+  text-decoration: underline;
+}
+
+/* 默认不显示下划线，保持页面简洁 */
+ins, a {
+  text-decoration: none;
+}
+
+/* 去除 ie6 & ie7 焦点点状线 */
+a:focus, *:focus {
+  outline: none;
+}
+
+/* 清除浮动 */
+.clearfix:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+/*IE/7/6*/
+.clear {
+  clear: both;
+  display: block;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+}
+
+/* 设置显示和隐藏，通常用来与 js 配合 */
+.hide {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+/* 设置浮动，减少浮动带来的 bug */
+.fl, .fr {
+  display: inline;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.web {
+  width: 100vw;
+  height: 100vh;
+  background-color: #0075c1;
+  background: url(../img/bg.png) no-repeat;
+  background-size: cover;
+  overflow: auto;
+}
+
+.web .box {
+  position: relative;
+  margin: 4.25rem auto;
+  width: 14.75rem;
+  height: 20.975rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 0px 4px 13px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 4px 13px 5px rgba(0, 0, 0, 0.3);
+  padding: 3.75rem 0.7rem 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #434242;
+  text-align: center;
+  font-size: 0.65rem;
+}
+
+.web .box .top {
+  position: absolute;
+  top: 1rem;
+  left: 0.7rem;
+  text-align: right;
+  width: 6.6rem;
+  border-bottom: 1px solid #434242;
+  font-size: 0.7rem;
+}
+
+.web .box .box_img {
+  width: 6.625rem;
+  height: 6.625rem;
+  border: solid 4px #434242;
+  margin-left: 3.25rem;
+  margin-top: 0.75rem;
+}
+
+.web .box .box_img img {
+  width: 100%;
+}
+
+.web .box .baocun_img {
+  display: block;
+  width: 4.675rem;
+  height: 1.425rem;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.39);
+          box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.39);
+  border-radius: 0.725rem;
+  margin: 0.75rem auto;
+  font-size: 0.6rem;
+  color: #0075c1;
+  line-height: 1.425rem;
+  text-decoration: none;
+}
