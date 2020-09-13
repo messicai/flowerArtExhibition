@@ -35,7 +35,12 @@ btn1.addEventListener("click", () => {
 })
 
 btn2.addEventListener("click", function() {
-    flag = [...alarm].every(ele => ele.innerText === '')
+    input.forEach((ele, index) => {
+        if (ele.value === '') {
+            alarm[index].innerText = '内容不能为空，请输入相应信息'
+        }
+    })
+    flag = [...alarm].every(ele => ele.innerText === '') //查询是否所有警告内容为空
     console.log(flag);
     if (flag) {
         sessionStorage.setItem('name', input[0].value)
